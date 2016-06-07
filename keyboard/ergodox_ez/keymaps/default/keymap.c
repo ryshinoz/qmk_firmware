@@ -23,13 +23,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------| LAlt |           |LMouse|------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  | CTRL |           |      |   N  |   M  |   ,  |   .  |   /  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |  cut | paste| copy | LAlt | LGui |                                       |   [  |   ]  |   =  | CTRL | LFn  |
+ *   |  cut | paste| copy | LAlt | LGui |                                       |   [  |   ]  |   =  | LGui | LFn  |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        | Left |Right |       | Up   | Down |
+ *                                        | Left |Right |       | Down | Up   |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | Home |       | PgUp |        |      |
- *                                 |Space |Backsp|------|       |------| Spac  | Enter|
+ *                                 |Space |Backsp|------|       |------| Spac   | Enter|
  *                                 |      |ace   | End  |       | PgDn |        |      |
  *                                 `--------------------'       `----------------------'
  */
@@ -50,8 +50,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              TO(WINDOWS,1),      KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,             KC_BSLS,
                           KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,          KC_QUOT,
              TO(MOUSE,1), KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,          KC_RSFT,
-                                  KC_LBRC,  KC_RBRC, KC_EQL,LCTL(KC_LSFT),   MO(FN),
-             KC_UP,       KC_DOWN,
+                                  KC_LBRC,  KC_RBRC, KC_EQL,LGUI(KC_LSFT),   MO(FN),
+             KC_DOWN,       KC_UP,
              KC_PGUP,
              KC_PGDN,KC_SPC, KC_ENT
     ),
